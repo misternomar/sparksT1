@@ -1,0 +1,114 @@
+h1 {
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 50px;
+}
+h2 {
+    color: #FFFFFF;
+    text-align: center;
+}
+p {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+main {
+    display: flex;
+    justify-content: center;
+}
+header {
+    display: block;
+}
+figure {
+    display: block;
+} 
+em {
+    font-family: monospace;
+}
+div {
+    display: block;
+}
+.container {
+    width: 1080px;
+    margin: 0 auto;
+}
+.rightside {
+    float: right;
+    height: 600px;
+    padding: 200px 15px 15px 200px;
+}
+.leftside {
+    color: #FFFFFF;
+    padding: 10px 0;
+    width: 510px;
+    float: left;
+}
+/**.leftside ul {
+    padding: 0 40px 15px 15px;
+}**/
+.txtlink {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+/**nav ul {
+    list-style-type: none;
+    margin-bottom: 15px;
+    color: #FFFFFF;
+}**/
+nav a {
+    padding: 5px 15px 5px 10px;
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 60px;
+    position: relative;
+    border-radius: 0px;
+}
+nav a:visited {
+    padding: 5px 15px 5px 200px;
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 60px;
+    border-radius: 80px;
+}
+nav a:hover, a:hover::after {
+    padding: 5px 15px 5px 200px;
+    color: #000000;
+    background-color: #FFFFFF;
+    font-size: 60px;
+    text-decoration: none;
+    display: block;
+    border-radius: 80px;
+    /**border-left: 20px solid #ffffff;
+    content: "";
+    top: 0;
+    right: -20px;**/
+}
+nav a:active{
+    padding: 5px 15px 5px 200px;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-size: 60px;
+    text-decoration: none;
+    border-radius: 80px;
+} 
+nav a:focus {
+    padding: 5px 15px 5px 200px;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-size: 60px;
+    text-decoration: none;
+    border-radius: 80px;
+}
+nav a {
+    -webkit-transition: all 1s ease-in 0s;
+    -o-transition: all 1s ease-in 0s;
+    transition: all 1s ease-in 0s;
+}
+#footer {
+    text-align: center;
+}
+#email {
+    text-decoration: none;
+    color: #FFFFFF;
+}
