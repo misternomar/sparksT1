@@ -93,6 +93,7 @@ div {
     padding: 200px 15px 15px 100px;
 }
 .leftside {
+    float: left;
     color: #FFFFFF;
     padding: 10px 0;
     width: 510px;
@@ -114,11 +115,6 @@ div {
     color: #FFFFFF;
     text-decoration: none;
 }
-/**nav ul {
-    list-style-type: none;
-    margin-bottom: 15px;
-    color: #FFFFFF;
-}**/
 nav a {
     padding: 5px 15px 5px 10px;
     display: block;
@@ -189,3 +185,9 @@ input[type="number"]::-ms-input-placeholder {
     /* Microsoft Edge */ 
     text-align: center; 
 } 
+.name {
+    float: left;
+    text-align: center;
+    color: #2d5a92;
+    font-size: 60px;
+}
