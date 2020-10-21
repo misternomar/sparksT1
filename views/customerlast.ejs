@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs') %>
+<br />
+<br />
+<br />
+    <header><h1><a href="/"> Basic Banking System </a></h1></header>
+    <br />
+    <br />
+    <div><h2> Customers </h2></div>
+    
+    <main class="container">
+        <table>
+            <tr> 
+                <th>
+                    <a class="hoverer" href="/customers">TRANSFER AGAIN
+                    </a>
+                </th>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            
+            
+        <%
+        if(userData.length!=0){
+        var i = 1;
+        // console.log(userData);
+        // console.log(data);
+        userData[0].forEach(function(data) {
+        %>
+            <tr>
+                <td><%= data.firstname %> <%= data.lastname %></td>
+            </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+        No Data Found
+        <% } %>
+        </table>
+    </main>
+</body>
+</html>

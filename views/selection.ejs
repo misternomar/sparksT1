@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+<br />
+<br />
+<br />
+    <header><h1><a href="/"> Basic Banking System </a></h1></header>
+    <br />
+    <br />
+    <div><h2> Selected Customer </h2></div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <main class="container">
+        <% console.log(data); %>
+        <table>
+            <tr>   
+                <td><%= data[0].customerid %></td>
+                <td><%= data[0].firstname %></td>
+                <td><%= data[0].lastname %></td>
+                <td><%= data[0].email %></td>
+                <td><%= data[0].balance %></td>
+            </tr>
+        </table>
+        
+    </main>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="center">
+        
+        <form action="/transfer" method="get">
+            <div>Enter Transfer Out Amount from <%= data[0].firstname %> <%= data[0].lastname %></div>
+            <br>
+            <div>
+            <input type="hidden" name="funder" value="<%= data[0].customerid %>">
+            <input type="number" name="transferAmount" step="0.01" placeholder="0.00" text-align="center">
+            </div>
+            <br>
+            <div class="centerAlign"><input class="submit" type="submit" value="SUBMIT"></div>
+            
+            
+        </form>
+    </div>
+</body>
+</html>
+    
+        

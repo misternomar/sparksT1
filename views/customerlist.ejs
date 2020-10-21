@@ -1,0 +1,32 @@
+<%- include('partials/header.ejs') %>
+<br />
+<br />
+<br />
+    <header><h1><a href="/"> Basic Banking System </a></h1></header>
+    <br />
+    <br />
+    <div><h2> Customers </h2></div>
+    
+    <main class="container">
+        <table>
+        <%
+        if(userData.length!=0){
+        var i = 1;
+        userData[0].forEach(function(data) {
+        %>
+            <tr>   
+                <td><a class="hoverer" href="/select?name=<%= data.customerid %>">
+                    <%= data.firstname %> <%= data.lastname %>
+                    </a>
+                </td>
+            </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+        No Data Found
+        <% } %>
+        </table>
+    </main>
+</body>
+</html>
+    
+        

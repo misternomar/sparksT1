@@ -1,15 +1,41 @@
+html, body {
+    text-align: center;
+}
 h1 {
     color: #FFFFFF;
+    text-shadow: 1px 1px 1px #000000;
     text-align: center;
     font-size: 50px;
+    background-color: #5985a6;
+    box-shadow: 0 12px 50px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    width: 500px;
+    margin: auto;
+    border-radius: 100px;
+    /**padding: 0px 50px 0px 50px;**/
 }
 h2 {
     color: #FFFFFF;
     text-align: center;
+    font-size: 40px;
+}
+a {
+    text-decoration: none;
+    color: #FFFFFF;
+    position: relative;
+}
+.hoverer {
+    text-align: center;
+}
+.hoverer:hover {
+    color: #000000;
 }
 p {
     color: #FFFFFF;
     font-size: 20px;
+}
+img {
+    box-shadow: 0 12px 50px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius:100px;
 }
 main {
     display: flex;
@@ -17,6 +43,14 @@ main {
 }
 header {
     display: block;
+}
+form {
+    font-size: 36px;
+    text-align: center;
+}
+input{
+    font-size: 24px;
+    text-align: center;
 }
 figure {
     display: block;
@@ -27,24 +61,55 @@ em {
 div {
     display: block;
 }
+.recipient {
+    text-align: center;
+    font-size: 30px;
+    background-color: #5985a6;
+    margin: auto;
+    padding: 5px 5px;
+    border-radius: 100px;
+}
+.recipient:hover {
+    color: #5985a6;
+    background-color: #FFFFFF;
+}
 .container {
     width: 1080px;
     margin: 0 auto;
+    text-align: center;
+}
+.center {
+    font-size: 30px;
+    text-align: center;
+}
+.centerAlign {
+    text-align: center;
+    margin: auto;
+    padding: auto;
 }
 .rightside {
     float: right;
     height: 600px;
-    padding: 200px 15px 15px 200px;
+    padding: 200px 15px 15px 100px;
 }
 .leftside {
     color: #FFFFFF;
     padding: 10px 0;
     width: 510px;
     float: left;
+    
 }
-/**.leftside ul {
-    padding: 0 40px 15px 15px;
-}**/
+.submit {
+    padding: 10px 20px 10px 20px;
+    color: #FFFFFF;
+    background-color: #5985a6;
+    text-align: center;
+    border-radius: 100px;
+}
+.submit:hover {
+    color: #000000;
+    background-color: #FFFFFF;
+}
 .txtlink {
     color: #FFFFFF;
     text-decoration: none;
@@ -61,54 +126,66 @@ nav a {
     color: #FFFFFF;
     font-size: 60px;
     position: relative;
-    border-radius: 0px;
+    border-radius: 100px;
 }
-nav a:visited {
-    padding: 5px 15px 5px 200px;
-    display: block;
-    text-decoration: none;
-    color: #FFFFFF;
-    font-size: 60px;
-    border-radius: 80px;
-}
-nav a:hover, a:hover::after {
-    padding: 5px 15px 5px 200px;
+nav a:hover {
+    padding: 5px 15px 5px 10px;
     color: #000000;
     background-color: #FFFFFF;
     font-size: 60px;
     text-decoration: none;
     display: block;
-    border-radius: 80px;
-    /**border-left: 20px solid #ffffff;
-    content: "";
-    top: 0;
-    right: -20px;**/
+    border-radius: 100px;
 }
 nav a:active{
-    padding: 5px 15px 5px 200px;
+    padding: 5px 15px 5px 10px;
     color: #FFFFFF;
     background-color: #000000;
     font-size: 60px;
     text-decoration: none;
-    border-radius: 80px;
+    border-radius: 100px;
 } 
 nav a:focus {
-    padding: 5px 15px 5px 200px;
+    padding: 5px 15px 5px 10px;
     color: #FFFFFF;
     background-color: #000000;
     font-size: 60px;
     text-decoration: none;
-    border-radius: 80px;
+    border-radius: 100px;
 }
 nav a {
     -webkit-transition: all 1s ease-in 0s;
     -o-transition: all 1s ease-in 0s;
     transition: all 1s ease-in 0s;
 }
-#footer {
+table, td, th, tr {  
+    border: none;
     text-align: center;
+    font-size: 30px;
 }
-#email {
-    text-decoration: none;
-    color: #FFFFFF;
+            
+table {
+    border-collapse: collapse;
+    width: 50%;
 }
+.table-data{
+    position: relative;
+    left:150px;
+    top:100px;
+}
+th, td {
+    padding: 10px;
+    color: #ffffff;
+}
+input[type="number"]::placeholder {
+    /* Firefox, Chrome, Opera */ 
+    text-align: center; 
+} 
+input[type="number"]:-ms-input-placeholder { 
+    /* Internet Explorer 10-11 */ 
+    text-align: center; 
+} 
+input[type="number"]::-ms-input-placeholder { 
+    /* Microsoft Edge */ 
+    text-align: center; 
+} 

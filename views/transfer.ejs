@@ -1,0 +1,33 @@
+<%- include('partials/header.ejs') %>
+<br />
+<br />
+<br />
+    <header><h1><a href="/"> Basic Banking System </a></h1></header>
+    <br />
+    <br />
+    <div><h2> Choose A Customer To Transfer Funds To </h2></div>
+    
+    <main class="container">
+        <table>
+        <%
+        if(transferData.length!=0){
+            transferData[0].forEach(function(results) {
+        %>
+            <tr>  
+                <td><%= results.customerid %></td>
+                <td><%= results.firstname %></td>
+                <td><%= results.lastname %></td> 
+                <td><%= results.email %></td>
+                <td><%= results.balance %></td>
+                <td><a class="recipient" href="/customerlast?receiver=<%= results.customerid %>">
+                    Transfer
+                    </a>
+                </td>
+            </tr>
+        <% })} else{ %>
+        No Data Found
+        <% } %>
+        </table>
+    </main>
+</body>
+</html>
