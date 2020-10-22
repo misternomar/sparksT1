@@ -69,8 +69,7 @@ app.get('/transfer', function(req, res, next) {
     });
 });
 app.get('/customerlast', function(req, res, next) {
-    var sql = `SELECT * FROM customers; 
-                UPDATE customers SET customerid_recipient = ${req.query.receiver}
+    var sql = `UPDATE customers SET customerid_recipient = ${req.query.receiver}
                 WHERE customerid = sent AND customerid < 11;
                 INSERT INTO transfers (customerid, transferin) 
                 SELECT customerid_recipient, transferamount
@@ -81,10 +80,12 @@ app.get('/customerlast', function(req, res, next) {
                 UPDATE customers SET transferamount = (SELECT transferamount from customers_temp
                 WHERE customerid = ${req.query.receiver});
                 UPDATE customers SET balance = balance + transferamount 
-                WHERE customerid = ${req.query.receiver}`;
+                WHERE customerid = ${req.query.receiver};
+                SELECT * FROM customers`;
     console.log("22222222222222222222222");
-    console.log(sql);
-    conn.query(sql, function (err, data, fields) {
+    var sql2 = JSON.stringify(sql);
+    console.log(sql2);
+    conn.query(sql2, function (err, data, fields) {
         if (err) {
             throw err;
         } 

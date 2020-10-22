@@ -27,7 +27,7 @@ a {
     text-align: center;
 }
 .hoverer:hover {
-    color: #000000;
+    color: #c36c05;
 }
 p {
     color: #FFFFFF;
@@ -74,13 +74,20 @@ div {
     background-color: #FFFFFF;
 }
 .container {
-    width: 1080px;
-    margin: 0 auto;
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    /*padding: 50px 50px;*/
     text-align: center;
+    background-color: #14427c;
+    opacity: 0.8;
+    display: block;
 }
 .center {
     font-size: 30px;
     text-align: center;
+    margin: auto;
+    padding: auto;
 }
 .centerAlign {
     text-align: center;
@@ -90,13 +97,13 @@ div {
 .rightside {
     float: right;
     height: 600px;
-    padding: 200px 15px 15px 100px;
+    padding: 200px 15px 15px 75px;
 }
 .leftside {
     float: left;
     color: #FFFFFF;
     padding: 10px 0;
-    width: 510px;
+    width: 350px;
     float: left;
     
 }
@@ -115,7 +122,7 @@ div {
     color: #FFFFFF;
     text-decoration: none;
 }
-nav a {
+.title a {
     padding: 5px 15px 5px 10px;
     display: block;
     text-decoration: none;
@@ -124,7 +131,7 @@ nav a {
     position: relative;
     border-radius: 100px;
 }
-nav a:hover {
+.title a:hover {
     padding: 5px 15px 5px 10px;
     color: #000000;
     background-color: #FFFFFF;
@@ -133,7 +140,7 @@ nav a:hover {
     display: block;
     border-radius: 100px;
 }
-nav a:active{
+.title a:active{
     padding: 5px 15px 5px 10px;
     color: #FFFFFF;
     background-color: #000000;
@@ -141,7 +148,7 @@ nav a:active{
     text-decoration: none;
     border-radius: 100px;
 } 
-nav a:focus {
+.title a:focus {
     padding: 5px 15px 5px 10px;
     color: #FFFFFF;
     background-color: #000000;
@@ -149,7 +156,7 @@ nav a:focus {
     text-decoration: none;
     border-radius: 100px;
 }
-nav a {
+.title a {
     -webkit-transition: all 1s ease-in 0s;
     -o-transition: all 1s ease-in 0s;
     transition: all 1s ease-in 0s;
@@ -158,6 +165,7 @@ table, td, th, tr {
     border: none;
     text-align: center;
     font-size: 30px;
+    margin: auto;
 }
             
 table {
@@ -188,6 +196,13 @@ input[type="number"]::-ms-input-placeholder {
 .name {
     float: left;
     text-align: center;
-    color: #2d5a92;
+    color: white;
     font-size: 60px;
+    /*display: flex;*/
+    justify-content: center;
+    margin: auto;
+    padding: 20px 20px;
+}
+.white {
+    color: white;
 }

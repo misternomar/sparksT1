@@ -7,11 +7,12 @@
     <br />
     <div><h2> Selected Customer </h2></div>
     <br>
-    <br>
-    <br>
-    <br>
+    
     <main class="container">
-        <% console.log(data); %>
+        <br>
+        <br>
+        <br>
+        <br>
         <table>
             <tr>   
                 <td><%= data[0].customerid %></td>
@@ -22,26 +23,27 @@
             </tr>
         </table>
         
+    
+    <br>
+    <br>
+    <br>
+    <br>
+        <div class="center">
+            
+            <form action="/transfer" method="get">
+                <div class="white">Enter Transfer Out Amount from <%= data[0].firstname %> <%= data[0].lastname %></div>
+                <br>
+                <div>
+                <input type="hidden" name="funder" value="<%= data[0].customerid %>">
+                <input type="number" name="transferAmount" step="0.01" placeholder="0.00" text-align="center">
+                </div>
+                <br>
+                <div class="centerAlign"><input class="submit" type="submit" value="SUBMIT"></div>
+                
+                
+            </form>
+        </div>
     </main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="center">
-        
-        <form action="/transfer" method="get">
-            <div>Enter Transfer Out Amount from <%= data[0].firstname %> <%= data[0].lastname %></div>
-            <br>
-            <div>
-            <input type="hidden" name="funder" value="<%= data[0].customerid %>">
-            <input type="number" name="transferAmount" step="0.01" placeholder="0.00" text-align="center">
-            </div>
-            <br>
-            <div class="centerAlign"><input class="submit" type="submit" value="SUBMIT"></div>
-            
-            
-        </form>
-    </div>
 </body>
 </html>
     
