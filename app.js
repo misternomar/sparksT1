@@ -21,7 +21,6 @@ app.get("/", function(req, res){
 
 app.get('/customers', function(req, res, next) {
     var sql = `SELECT * FROM customers; UPDATE customers SET transferamount = 0, sent = 0`;
-    console.log(sql);
     conn.query(sql, function (err, data, fields) {
         if (err) {
             throw err;
@@ -33,11 +32,7 @@ app.get('/customers', function(req, res, next) {
 });
 
 app.get('/select', function(req, res) {
-    var sql = `SELECT * FROM customers WHERE customerid = ${req.query.name}`;
-            
-    // var log1 = sql.charAt(sql.length-1);
-    console.log(sql);
-    conn.query(sql, function (err, data, fields) {
+    var sql = `SELECT * FROM customers WHERE customerid = ${req.query.name}`;conn.query(sql, function (err, data, fields) {
         if (err) {
             throw err;
         } 
@@ -47,15 +42,11 @@ app.get('/select', function(req, res) {
     });
 });
 
-// var transferTo = 1;
 app.get('/transfer', function(req, res, next) {
-    // var sql = `UPDATE transfers SET customerid = ${req.query.giver}, transferout = ${req.query.transferAmount}; UPDATE customers SET balance = balance - ${req.query.transferAmount}`;
     var sql = `SELECT * FROM customers;
                 UPDATE customers SET balance = balance - ${req.query.transferAmount}, transferamount = ${req.query.transferAmount}, sent = ${req.query.funder} 
                 WHERE customerid = ${req.query.funder}; 
                 INSERT INTO transfers (customerid, transferout) VALUES (${req.query.funder},${req.query.transferAmount})`;
-    console.log("111111111111111111111");
-    console.log(sql);
     conn.query(sql, function (err, results, fields) {
         
         if (err) {
@@ -82,10 +73,7 @@ app.get('/customerlast', function(req, res, next) {
                 UPDATE customers SET balance = balance + transferamount 
                 WHERE customerid = ${req.query.receiver};
                 SELECT * FROM customers`;
-    console.log("22222222222222222222222");
-    var sql2 = JSON.stringify(sql);
-    console.log(sql2);
-    conn.query(sql2, function (err, data, fields) {
+    conn.query(sql, function (err, data, fields) {
         if (err) {
             throw err;
         } 
